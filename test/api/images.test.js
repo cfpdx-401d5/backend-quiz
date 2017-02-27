@@ -48,4 +48,12 @@ describe('images API', () => {
             });
     });
 
+    it('GETs the image by id', () => {
+        return request
+        .get(`/images/${postedImage._id}`)
+        .then(res => {
+            assert.deepEqual(res.body, postedImage);
+        });
+    });
+
 });
