@@ -21,26 +21,31 @@ describe('images API', () => {
         category: 'food',
         url: 'http://www.bacon.com/'
     };
+
+    let postedImage = [];
     
     before(() => mongoose.connection.dropDatabase());
 
     it('POSTs an image', () => {
         return request
-        .post('/images')
-        .send(testingImage)
-        .then(res => {
-            assert.isDefined(res.body._id);
-            assert.equal(res.body.title, 'bacon');
-            assert.equal(res.body.category, testingImage.category);
-            assert.equal(res.body.url, testingImage.url);
-        });
+            .post('/images')
+            .send(testingImage)
+            .then(res => {
+                postedImage = res.body;
+                assert.isDefined(res.body._id);
+                assert.equal(res.body.title, 'bacon');
+                assert.equal(res.body.category, testingImage.category);
+                assert.equal(res.body.url, testingImage.url);
+            });
     });
 
-    function saveImage (image){
+    it('GETs the POSTed image', () => {
         return request
-        .post('/images')
-        .send(image)
-        .then(res => res.body);
-    }
+            .get('/images')
+            .then(res => {
+                const gotImage = res.body;
+                assert.deepEqual(gotImage[0], postedImage);
+            });
+    });
 
 });
