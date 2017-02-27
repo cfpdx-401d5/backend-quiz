@@ -1,0 +1,22 @@
+{
+  "name": "backend-quiz",
+  "version": "1.0.0",
+  "description": "in-class 401 backend quiz",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhuneke/backend-quiz.git"
+  },
+  "author": "Brigitte Huneke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhuneke/backend-quiz/issues"
+  },
+  "homepage": "https://github.com/bhuneke/backend-quiz#readme"
+}
