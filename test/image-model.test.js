@@ -1,10 +1,17 @@
 const Image = require('../lib/models/image');
-const assert = require('chai').assert;
-const testInvalid = require('./test-invalid')(Image);
 
 let testImage = {
-    title: 'water bottle',
-    description:
-    category: ''
-    url:
-}
+    title: 'eggs',
+    description: 'this isn\'t required',
+    category: 'food',
+    url: 'http://www.myimage.com'
+};
+
+describe('Image model', () => {
+
+    it('validation passes with all required fields', () => {
+        return new Image(testImage)
+            .validate();
+    });
+
+});
