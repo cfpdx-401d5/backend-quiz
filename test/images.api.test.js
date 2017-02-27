@@ -42,4 +42,25 @@ describe('images REST API', () => {
                 assert.deepEqual(images, [testImage0]);
             });
     });
+
+    it('retrieves an image by id', () => {
+        let testImageId = '';
+
+        saveImage(testImage0)
+            .then(savedImage => {
+                console.log('TEST IMAGE', testImage0);
+                testImage0 = savedImage[0];
+                testImageId = testImage0._id;
+            })
+            .then(() => {
+                return request
+                    .get(`/images/${testImageId}`);
+            })
+            .then(res => {
+                const image = res.body;
+                assert.equal(image.title = 'cute frolicking chipmunks');
+                assert.equal(image.category = 'animal');
+                assert.equal(image.url, 'http://www.cutestchipmunks.com/frolick.jpg');
+            });
+    });
 });
