@@ -29,6 +29,7 @@
   "dependencies": {
     "express": "^4.14.1",
     "mongoose": "^4.8.5",
+    "mongoose-type-url": "^1.0.2",
     "morgan": "^1.8.1"
   }
 }
