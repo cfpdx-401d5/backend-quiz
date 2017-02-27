@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/krogseng/backend-quiz#readme",
   "dependencies": {
+    "body-parser": "^1.16.1",
     "body-parser-json": "^1.9.2",
     "express": "^4.14.1",
     "http": "0.0.0",
     "mongoose": "^4.8.5",
+    "morgan": "^1.8.1",
     "promises": "^0.2.5"
   },
   "devDependencies": {
