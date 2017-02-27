@@ -8,7 +8,7 @@ const assert = chai.assert;
 
 chai.use(chaiHttp);
 
-process.env.DB_URI =  'mongodb://localhost:27017/backend-quiz-images-REST';
+process.env.DB_URI = 'mongodb://localhost:27017/backend-quiz-images-REST';
 require('../../lib/connection');
 
 describe('images API', () => {
@@ -23,7 +23,7 @@ describe('images API', () => {
     };
 
     let postedImage = [];
-    
+
     before(() => mongoose.connection.dropDatabase());
 
     it('POSTs an image', () => {
@@ -50,10 +50,10 @@ describe('images API', () => {
 
     it('GETs the image by id', () => {
         return request
-        .get(`/images/${postedImage._id}`)
-        .then(res => {
-            assert.deepEqual(res.body, postedImage);
-        });
+            .get(`/images/${postedImage._id}`)
+            .then(res => {
+                assert.deepEqual(res.body, postedImage);
+            });
     });
 
 });
