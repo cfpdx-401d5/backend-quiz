@@ -1,0 +1,26 @@
+{
+  "name": "backend-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "mocha --recursive",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmd-kvn/backend-quiz.git"
+  },
+  "author": "Kevin Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmd-kvn/backend-quiz/issues"
+  },
+  "homepage": "https://github.com/cmd-kvn/backend-quiz#readme",
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "mocha": "^3.2.0"
+  }
+}
