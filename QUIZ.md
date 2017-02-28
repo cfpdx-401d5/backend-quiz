@@ -24,8 +24,6 @@ you demonstrating what you know.
 
 ## API Requirements
 
-### Legend
-
 ### Accepts post of image to add to collection
 
 POST to `/images`:
