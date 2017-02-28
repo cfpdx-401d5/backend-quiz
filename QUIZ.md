@@ -24,7 +24,7 @@ you demonstrating what you know.
 
 ## API Requirements
 
-### Accepts post of image to add to collection
+### Accepts post of contact to add to collection
 
 POST to `/contacts`:
 
@@ -60,7 +60,7 @@ GET to `/contacts`:
 * Notice fieldset being returned
 * Return empty array if no images
 
-### Retreive image detail
+### Retreive contact detail by id
 
 GET to `/contacts/:id`:
 
