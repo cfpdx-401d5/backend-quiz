@@ -19,6 +19,8 @@ describe('CONTACTS API ROUTE TESTS', () => {
     let max = {
         name: 'maxwell the lion king',
         email: 'noisyboy@codefellowspdx.com',
+        company: 'Code Fellows PDX',
+        notes: 'little instigator',
         category: 'school'
     };
 
@@ -31,6 +33,8 @@ describe('CONTACTS API ROUTE TESTS', () => {
                 max._id = savedContact._id;
                 assert.equal(savedContact.name, max.name);
                 assert.equal(savedContact.email, max.email);
+                assert.equal(savedContact.company, max.company);
+                assert.equal(savedContact.notes, max.notes);
                 assert.equal(savedContact.category, max.category);
             });
     });
