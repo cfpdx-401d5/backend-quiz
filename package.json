@@ -1,0 +1,40 @@
+{
+  "name": "backend-quiz",
+  "version": "1.0.0",
+  "description": "in-class 401 backend quiz",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "test:watch": "npm run test -w",
+    "start": "node server",
+    "start:watch": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhuneke/backend-quiz.git"
+  },
+  "author": "Brigitte Huneke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhuneke/backend-quiz/issues"
+  },
+  "homepage": "https://github.com/bhuneke/backend-quiz#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.16.1",
+    "mocha": "^3.2.0",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5"
+  }
+}
