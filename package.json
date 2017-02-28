@@ -4,7 +4,11 @@
   "description": "Code Fellows 401d5 Backend Quiz",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint",
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "start": "node server",
+    "start:watch": "npm run nodemon server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,20 @@
   "bugs": {
     "url": "https://github.com/mericks/backend-quiz/issues"
   },
-  "homepage": "https://github.com/mericks/backend-quiz#readme"
+  "homepage": "https://github.com/mericks/backend-quiz#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.16.1",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "promise": "^7.1.1",
+    "superagent": "^3.5.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1"
+  }
 }
