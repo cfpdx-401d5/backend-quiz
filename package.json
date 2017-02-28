@@ -1,0 +1,19 @@
+{
+  "name": "backend-quiz",
+  "version": "1.0.0",
+  "description": "Code Fellows 401d5 Backend Quiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mericks/backend-quiz.git"
+  },
+  "author": "Michelle Erickson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mericks/backend-quiz/issues"
+  },
+  "homepage": "https://github.com/mericks/backend-quiz#readme"
+}
