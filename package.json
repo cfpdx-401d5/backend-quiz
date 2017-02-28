@@ -1,0 +1,35 @@
+{
+  "name": "backend-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "npm run test -- -w",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meghanroserebecca/backend-quiz.git"
+  },
+  "author": "meghan rebecca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meghanroserebecca/backend-quiz/issues"
+  },
+  "homepage": "https://github.com/meghanroserebecca/backend-quiz#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.16.1",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1"
+  }
+}
