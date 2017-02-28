@@ -1,6 +1,6 @@
 # Back End Quiz
 
-Create an express/mongo server for simple image list management
+Create an express/mongo server for simple contact management
 
 ## Rules
 
@@ -24,78 +24,80 @@ you demonstrating what you know.
 
 ## API Requirements
 
-### Accepts post of image to add to collection
+### Accepts post of contact to add to collection
 
-POST to `/images`:
+POST to `/contacts`:
 
 ```
 {
-    title: <title>,
-    description: <description>,
-    category: <animals|food|places>,
-    url: <url> 
+    name: <name>,
+    email: <email>,
+    company: <company>,
+    notes: <notes>,
+    category: <work|school|personal> 
 }
 ```
 
-* `title`, `category`, and `url` are required
-* `category` should be limited to one of specified values ("animals", "food", or "places")
+* `name`, `email` and `category` are required
+* `category` should be limited to one of specified values ("work", "school", or "personal")
 
 If any of those conditions are not met, return a 400 status code.
 
-POST should return the same format as GET to `/images/:id`:
+POST should return the same format as GET to `/contacts/:id`:
 
-### Retrieve list of images
+### Retrieve list of contacts
 
-GET to `/images`:
+GET to `/contacts`:
 
 ```
 [
-    { _id: "123abc", title: "titleOne", category: "animals" },
-    { _id: "456def", title: "titleTwo", category: "animals" },
-    { _id: "789ghi", title: "titleThree", category: "food" }
+    { _id: "123abc", name: "name one", category: "work" },
+    { _id: "456def", name: "other name", category: "work" },
+    { _id: "789ghi", name: "nom de plume", category: "personal" }
 ]
 ```
 
 * Notice fieldset being returned
 * Return empty array if no images
 
-### Retreive image detail
+### Retreive contact detail by id
 
-GET to `/images/:id`:
+GET to `/contacts/:id`:
 
 ```
 { 
     _id: "123abc", 
-    title: "cute kitten at table", 
-    category: "animals",
-    description: "adorable kitten doing lunch",
-    url: "http://image.png" 
+    name: "Peson McPerson", 
+    email: "person@work.com",
+    company: "work iz work"
+    category: "work",
+    notes: "Met at the schmoozy meetup"
 }
 ```
 
 * Notice fieldset being returned
 * Return 404 if id doesn't exist
 
-### Retrieve list of images in one category
+### Retrieve list of contacts in one category
 
-GET to `/images?category=animals`:
+GET to `/contacts?category=work`:
 
 ```
 [
-    { _id: "123abc", title: "titleOne", category: "animals" },
-    { _id: "456def", title: "titleTwo", category: "animals" }
+    { _id: "123abc", name: "name one", category: "work" },
+    { _id: "456def", name: "other name", category: "work" }
 ]
 ```
 
-* Same fieldset as normal GET of images
-* Return empty array if no images
+* Same fieldset as normal GET of contact
+* Return empty array if no contacts
 * If category not one of three defined categories, return 400
 
 ## Testing
 
 You only need to include the following e2e test scenario:
 
-* POST an image
-* use returned id to GET same image
-* assert that `title`, `description`, `category`, and `url` are equal
-to orignally supplied data.
+* POST a contact
+* use returned id to GET same contact
+* assert that `name`, `email`, `company`, `category`, and `notes`
+are equal to orignally supplied data.
